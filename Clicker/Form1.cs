@@ -48,7 +48,7 @@ namespace Clicker
         private void button1_Click(object sender, EventArgs e)
         {
             cash += (uint)Math.Pow(10, buttonlevel - 1);
-            label1.Text = "Kasa: $" + cash.ToString();
+            
 
         }
 
@@ -81,6 +81,7 @@ namespace Clicker
 
                 A1AmountTextbox.Text = A1Amount.ToString();
                 Cash -= upgradecost;
+                
             }
         }
 
@@ -95,12 +96,14 @@ namespace Clicker
                 if (!A1Tumer.Enabled)
                     A1Tumer.Enabled = true;
                 Cash -= upgradecost;
+                
             }
         }
 
         private void A1tick(object sender, EventArgs e)
         {
             Cash += (uint)(A1Amount * Multiply);
+            
         }
 
         private void A2UpgradeAmount_Click(object sender, EventArgs e)
@@ -111,12 +114,14 @@ namespace Clicker
                 A2Amount += 100;
                 A2AmountTextbox.Text = A2Amount.ToString();
                 Cash -= upgradecost;
+                
             }
         }
 
         private void A2Tick(object sender, EventArgs e)
         {
             Cash += (uint)(A1Amount * Multiply);
+            
         }
 
         private void A2UpgradeInterval_Click(object sender, EventArgs e)
@@ -130,6 +135,7 @@ namespace Clicker
                 if (!A2Tamer.Enabled)
                     A2Tamer.Enabled = true;
                 Cash -= upgradecost;
+                
             }
         }
 
@@ -141,7 +147,7 @@ namespace Clicker
                 Multiply = Multiply * 1.105;
                 MultiplyBotTextBox.Text = Multiply.ToString();
                 Cash -= upgradecost;
-
+                
             }
 
         }
@@ -151,9 +157,10 @@ namespace Clicker
             uint upgradecost = (uint)A3Amount * 5;
             if (Cash >= upgradecost)
             {
-                A3Amount += 100;
+                A3Amount += 1000;
                 A3AmountTextBox.Text = A3Amount.ToString();
                 Cash -= upgradecost;
+                
             }
         }
 
@@ -168,15 +175,22 @@ namespace Clicker
                 if (!A3Tumer.Enabled)
                     A3Tumer.Enabled = true;
                 Cash -= upgradecost;
+                
             }
         }
 
         private void A3Timer_Tick(object sender, EventArgs e)
         {
             Cash += (uint)(A3Amount * Multiply);
+            
         }
 
-        private void A2Tumer(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
