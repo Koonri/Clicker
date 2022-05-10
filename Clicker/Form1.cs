@@ -48,7 +48,7 @@ namespace Clicker
         private void button1_Click(object sender, EventArgs e)
         {
             cash += (uint)Math.Pow(10, buttonlevel - 1);
-            
+            label1.Text = "Kasa : $" + cash.ToString();
 
         }
 
